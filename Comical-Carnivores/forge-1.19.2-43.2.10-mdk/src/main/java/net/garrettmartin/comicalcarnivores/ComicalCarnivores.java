@@ -1,6 +1,9 @@
 package net.garrettmartin.comicalcarnivores;
 
 import com.mojang.logging.LogUtils;
+
+import net.garrettmartin.comicalcarnivores.block.ModBlocks;
+import net.garrettmartin.comicalcarnivores.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -22,6 +25,9 @@ public class ComicalCarnivores
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+        
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
     }
