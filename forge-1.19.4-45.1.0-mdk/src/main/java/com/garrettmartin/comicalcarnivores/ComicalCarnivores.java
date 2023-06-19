@@ -1,6 +1,7 @@
 package com.garrettmartin.comicalcarnivores;
 
 import com.garrettmartin.comicalcarnivores.block.ModBlocks;
+import com.garrettmartin.comicalcarnivores.item.ModCreativeModeTabs;
 import com.garrettmartin.comicalcarnivores.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTab;
@@ -51,6 +52,12 @@ public class ComicalCarnivores {
             event.accept(ModItems.WILLIAM);
         }
         if(event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.WILLIAM_BLOCK);
+        }
+
+        // Our Own Tab
+        if(event.getTab() == ModCreativeModeTabs.COMICALCARNIVORES_TAB) {
+            event.accept(ModItems.WILLIAM);
             event.accept(ModBlocks.WILLIAM_BLOCK);
         }
     }
