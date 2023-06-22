@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "comicalcarnivores:william_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_william": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "comicalcarnivores:william"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_william",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "comicalcarnivores:william_block"
+    ]
+  }
+}

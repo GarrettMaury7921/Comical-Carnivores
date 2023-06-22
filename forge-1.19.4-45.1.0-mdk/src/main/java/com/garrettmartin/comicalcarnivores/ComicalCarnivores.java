@@ -1,9 +1,12 @@
 package com.garrettmartin.comicalcarnivores;
 
 import com.garrettmartin.comicalcarnivores.block.ModBlocks;
+import com.garrettmartin.comicalcarnivores.entity.ModEntities;
+import com.garrettmartin.comicalcarnivores.entity.client.GoblinRenderer;
 import com.garrettmartin.comicalcarnivores.item.ModCreativeModeTabs;
 import com.garrettmartin.comicalcarnivores.item.ModItems;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -29,6 +32,7 @@ public class ComicalCarnivores {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -59,6 +63,7 @@ public class ComicalCarnivores {
         if(event.getTab() == ModCreativeModeTabs.COMICALCARNIVORES_TAB) {
             event.accept(ModItems.WILLIAM);
             event.accept(ModBlocks.WILLIAM_BLOCK);
+            event.accept(ModItems.GOBLIN_SPAWN_EGG);
         }
     }
 
@@ -68,7 +73,9 @@ public class ComicalCarnivores {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            EntityRenderers.register(ModEntities.GOBLIN.get(), GoblinRenderer::new);
         }
     }
+
+
 }

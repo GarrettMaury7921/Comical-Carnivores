@@ -1,12 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "category": "building",
   "ingredients": [
     {
       "item": "comicalcarnivores:william_block"
     }
   ],
   "result": {
-    "item": "comicalcarnivores:william",
-    "count": 9
+    "count": 9,
+    "item": "comicalcarnivores:william"
   }
 }
