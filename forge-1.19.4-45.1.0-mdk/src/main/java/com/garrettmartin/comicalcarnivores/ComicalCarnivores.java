@@ -7,7 +7,6 @@ import com.garrettmartin.comicalcarnivores.item.ModCreativeModeTabs;
 import com.garrettmartin.comicalcarnivores.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
