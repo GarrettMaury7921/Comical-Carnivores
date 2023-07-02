@@ -18,6 +18,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+
+        // Register Item Models Here
         simpleItem(ModItems.WILLIAM);
 
         withExistingParent(ModItems.GOBLIN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
